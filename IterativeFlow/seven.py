@@ -1,0 +1,5 @@
+print(range(10))
+print(range(0,10))
+print(range(0,10,1))
+print(range(0,10,2))
+print(range(5,50,10))

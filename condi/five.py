@@ -1,0 +1,1 @@
+print("pass" if int(input("Enter Marks:"))>=35 else "fail")
