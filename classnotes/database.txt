@@ -1,0 +1,17 @@
+
+
+Python 2 MySQL Database
+
+mysql module?
+
+How to list all modules?
+
+help('modules')
+print(help('modules'))
+
+
+https://github.com/mysql/mysql-connector-python
+
+pip install mysql-connector-python
+
+
