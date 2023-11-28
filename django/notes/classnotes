@@ -1,0 +1,24 @@
+python --version
+py -m django --version 
+
+pip install django
+
+if required create venv 
+
+python -m venv django-env
+
+django-env\Scripts\activate
+
+=====================================
+startproject
+startapp
+runserver
+
+>django-admin startproject hdfcproject
+>py manage.py startapp userapp
+>py manage.py startapp orderapp
+>py manage.py startapp crmapp
+
+py manage.py runserver 
+py manage.py migrate 
+
