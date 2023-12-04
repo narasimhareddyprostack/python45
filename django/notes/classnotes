@@ -22,3 +22,27 @@ runserver
 py manage.py runserver 
 py manage.py migrate 
 
+================================================================================
+import pymysql
+pymysql.install_as_MySQLdb()
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pro4pm',
+        'USER': 'root',
+        'PASSWORD': 'root'
+    }
+}
+
+
+How to check db connection success or not?
+
+>py manage.py shell
+interactive console
+>> from django.db import connection
+>>con=connection.cursor()
+
+If you are getting any error, means db connection successfull.
+
+
