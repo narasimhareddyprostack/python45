@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+{% if user_list %}
+<table class="table">
+    <thead class="bg-dark text-white">
+        <th>User Id</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        {% for user in user_list %}
+        <tr>
+            <td>{{user.uid}}</td>
+            <td>{{user.uname}}</td>
+            <td>{{user.uloc}}</td>
+            <td>{{user.uemail}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<h2>No Data</h2>
+{% endif %}
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
