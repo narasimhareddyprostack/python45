@@ -6,3 +6,7 @@ from userapp.models import User
 def getuserdata(request):
     user_list = User.objects.all()
     return render(request, 'user.html', context={'user_list': user_list})
+
+
+def gethomepage(request):
+    return render(request, 'home.html')
