@@ -5,6 +5,7 @@ from userapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.gethomepage),
-    path("add/", views.getnewuserpage),
+    path("add/", views.getnewuserpage, name="add"),
     path("newemp/", views.getnewemppage),
+    path("save/", views.saveemp, name="saveemp")
 ]
