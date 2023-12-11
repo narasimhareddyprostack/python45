@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create New Employee</h1>
+    <form action="/create/" method="POST">
+        {% csrf_token %}
+        <div>
+         <label for="">Employee ID</label>
+          {{empform.eid}}
+        </div>
+        <div>
+            <label for="">Employee Name:</label>
+            {{empform.ename}}
+        </div>
+        <div>
+            <label for="">Salary</label>
+            {{empform.esal}}
+        </div>
+        <div>
+            <label for="">Email Id</label>
+            {{empform.eemail}}
+        </div>
+        <input type="submit" value="Create"/>
+    </form>
+</body>
+</html>
