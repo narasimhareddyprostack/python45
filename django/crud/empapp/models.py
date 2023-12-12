@@ -8,6 +8,7 @@ class Employee(models.Model):
     ename = models.CharField(max_length=32)
     esal = models.IntegerField()
     eemail = models.EmailField()
+    # eimage= models.ImageField()
 
     class Meta:
         db_table = "employee"

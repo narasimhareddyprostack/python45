@@ -25,8 +25,23 @@ def displayempview(request):
     return render(request, 'display.html', {'emp_list': emp_list})
 
 
-def upateempview(request):
-    pass
+def editempview(request, id):
+    employee = Employee.objects.get(id=id)
+    return render(request, 'update.html', {'employee': employee})
+
+
+def upateempview(request, id):
+    employee = Employee.objects.get(id=id)
+    if request.method == 'POST':
+        empdata = EmployeeForm(request.POST, instance=employee)
+        if empdata.is_valid():
+            try:
+                empdata.save()
+                return redirect('/read')
+            except:
+                pass
+
+    return render(request, 'update.html')
 
 
 def deletempview(request, id):
